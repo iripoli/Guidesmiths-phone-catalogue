@@ -7,7 +7,6 @@ interface Item {
   name: string;
   id: string;
 }
-const path = window.location.pathname;
 
 const PhoneCatalogueItem = ({ image, name, id }: Item) => {
   return (
