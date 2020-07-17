@@ -1,10 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;800&display=swap");
 @font-face {
-  font-family: "Scout"; /*a name to be used later*/
-  src: url("./assets/fonts/Scout\ Font\ Family/Scout-Regular.otf");
-}
-@font-face {
-  font-family: "Scout-Bold"; /*a name to be used later*/
-  src: url("./assets/fonts/Scout\ Font\ Family/Scout-Bold.otf");
+  font-family: "Mulish"; /*a name to be used later*/
+  src: url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;800&display=swap");
 }
 
 body {
@@ -14,8 +11,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite; */
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -23,5 +24,5 @@ code {
 
 * {
   box-sizing: border-box;
-  font-family: "Scout", sans-serif;
+  font-family: "Mulish", sans-serif;
 }

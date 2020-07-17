@@ -1,0 +1,68 @@
+.container__homePage {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  overflow: hidden;
+
+  & .title__homePage {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 1rem;
+    margin-left: 3rem;
+  }
+  & .title2__homePage {
+    font-size: 2.5rem;
+    margin: 1rem;
+    margin-left: 10rem;
+    background-color: white;
+    color: #17ae8e;
+    font-weight: bold;
+    padding: 10px;
+    width: fit-content;
+  }
+
+  & .title3__homePage {
+    font-size: 4rem;
+    text-align: center;
+    font-weight: bold;
+    margin: 1rem;
+    margin-right: 6rem;
+  }
+
+  & .buttonContainer__homePage {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    border-radius: 4px;
+    border: transparent;
+
+    & :hover {
+      background: transparent;
+      color: #17ae8e;
+      border: solid #17ae8e 3px;
+    }
+  }
+  & .iphoneContainer__homePage {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    position: relative;
+    margin-left: 1rem;
+  }
+
+  & .iphone__homePage {
+    position: absolute;
+    height: 40rem;
+    width: 40rem;
+    top: -367px;
+    right: -100px;
+  }
+
+  & .guidesmithsLogo__homePage {
+    height: 6.5rem;
+    width: 6rem;
+    top: -122px;
+    right: 170px;
+    position: absolute;
+  }
+}
