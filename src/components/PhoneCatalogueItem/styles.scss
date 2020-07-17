@@ -1,11 +1,22 @@
 .itemContainer {
-  height: 20rem;
+  height: 30rem;
   width: fit-content;
+  padding: 1rem;
   margin: 4rem;
+  margin-left: 1.5rem;
   text-align: center;
   cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  border: transparent;
+}
+.itemContainer:hover {
+  height: 31rem;
+  color: var(--green-color);
 }
 
 .itemImage {
-  width: 20rem;
+  max-width: 100%;
+  max-height: 90%;
+  min-height: 90%;
+  min-width: 15rem;
 }
