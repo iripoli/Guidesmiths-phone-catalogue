@@ -31,8 +31,8 @@ const CataloguePage = () => {
     return (
       <div>
         <div className="phoneListContainer">
-          {phones.map(({ name, images }: any) => (
-            <PhoneCatalogueItem name={name} image={images[0]} />
+          {phones.map(({ name, images, _id }: any) => (
+            <PhoneCatalogueItem name={name} image={images[0]} id={_id} />
           ))}
         </div>
       </div>

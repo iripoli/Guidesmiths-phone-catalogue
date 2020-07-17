@@ -1,17 +1,22 @@
 import React from "react";
 import "./styles.scss";
+import { Link } from "react-router-dom";
 
 interface Item {
   image: string;
   name: string;
+  id: string;
 }
+const path = window.location.pathname;
 
-const PhoneCatalogueItem = ({ image, name }: Item) => {
+const PhoneCatalogueItem = ({ image, name, id }: Item) => {
   return (
-    <div className="itemContainer">
-      <img src={image} alt={`Front of ${name}`} className="itemImage" />
-      <h1 className="itemName">{name}</h1>
-    </div>
+    <Link to={`/catalogue/${id}`} className="itemName">
+      <div className="itemContainer">
+        <img src={image} alt={`Front of ${name}`} className="itemImage" />
+        <h1 className="itemName">{name}</h1>
+      </div>
+    </Link>
   );
 };
 export default PhoneCatalogueItem;
