@@ -1,9 +1,9 @@
 .container {
-  border-bottom: solid black 1px;
   display: flex;
   flex-direction: row;
   list-style-type: none;
   justify-content: flex-end;
+  margin-right: 4rem;
 }
 
 li {
