@@ -9,28 +9,32 @@ const HomePage = () => {
     history.push("/catalogue");
   };
   return (
-    <div className="container__homePage">
-      <p className="title__homePage">THE BEST PHONES FROM LIKE...</p>
-      <p className="title2__homePage">4 YEARS AGO, ALL IN</p>
-      <p className="title3__homePage">ONE PLACE!!</p>
-      <div className="buttonContainer__homePage">
-        <CustomButton
-          label={"Go to catalogue"}
-          className={"Home_Page_Button"}
-          handleClick={() => handleClick()}
-        />
-      </div>
-      <div className="iphoneContainer__homePage">
-        <img
-          className="iphone__homePage"
-          src={require("../../assets/images/iphone7.png")}
-          alt="Iphone front"
-        />
-        <img
-          className="guidesmithsLogo__homePage"
-          src={require("../../assets/images/guidesmiths-logo.png")}
-          alt="Guidesmiths logo in iphone"
-        />
+    <div className="homePage">
+      <div className="container__homePage">
+        <div className="column1__homePage">
+          <p className="title__homePage">THE BEST PHONES FROM LIKE...</p>
+          <p className="title2__homePage">4 YEARS AGO, ALL IN</p>
+          <p className="title3__homePage">ONE PLACE!!</p>
+          <div className="buttonContainer__homePage">
+            <CustomButton
+              label={"Go to catalogue"}
+              className={"Home_Page_Button"}
+              handleClick={() => handleClick()}
+            />
+          </div>
+        </div>
+        <div className="iphoneContainer__homePage">
+          <img
+            className="iphone__homePage"
+            src={require("../../assets/images/iphone7.png")}
+            alt="Iphone front"
+          />
+          <img
+            className="guidesmithsLogo__homePage"
+            src={require("../../assets/images/guidesmiths-logo.png")}
+            alt="Guidesmiths logo in iphone"
+          />
+        </div>
       </div>
     </div>
   );
