@@ -32,7 +32,12 @@ const CataloguePage = () => {
       <div>
         <div className="phoneListContainer">
           {phones.map(({ name, images, _id }: any) => (
-            <PhoneCatalogueItem name={name} image={images[0]} id={_id} />
+            <PhoneCatalogueItem
+              name={name}
+              image={images[0]}
+              id={_id}
+              key={_id}
+            />
           ))}
         </div>
       </div>

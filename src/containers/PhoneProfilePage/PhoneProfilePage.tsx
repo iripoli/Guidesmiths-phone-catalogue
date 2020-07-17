@@ -26,13 +26,12 @@ const PhoneProfilePage = () => {
         await dispatch(fetchOnePhone(id));
       })();
     }
-  }, [dispatch]);
+  }, [dispatch, phoneList, id]);
 
   // IF PHONES HAVE BEEN FETCHED USE FIND THE ONE THAT MATCHES THE ID
 
   if (phoneList.length > 0) {
     phone = phoneList.find((phone: any) => phone._id === id);
-    console.log(phoneList);
   }
 
   //IF THERE'S NO PHONE SHOW THE LOADING COMPONENT
