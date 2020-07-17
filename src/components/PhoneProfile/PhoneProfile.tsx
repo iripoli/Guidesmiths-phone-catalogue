@@ -24,9 +24,15 @@ const PhoneProfile = ({ phone }: PhoneProfile) => {
     screen,
   } = phone;
   return (
-    <>
+    <div>
       <div className="container__profile">
-        <img src={images[0]} className="image__profile" />
+        <div className="column1__profile">
+          <img
+            src={images[0]}
+            className="image__profile"
+            alt={`Front of a  ${name}`}
+          />
+        </div>
         <div className="column2__profile">
           <h1 className="name__profile">{name}</h1>
           <h3 className="manufacturer__profile">by {manufacturer}</h3>
@@ -46,7 +52,7 @@ const PhoneProfile = ({ phone }: PhoneProfile) => {
           handleClick={() => handleClick()}
         />
       </div>
-    </>
+    </div>
   );
 };
 export default PhoneProfile;
