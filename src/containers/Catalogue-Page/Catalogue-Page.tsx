@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAllPhones } from "../../redux/actions/fetchPhones.actions";
+import PhoneCatalogueItem from "../../components/PhoneCatalogueItem/PhoneCatalogueItem";
+import "./styles.scss";
 
 interface RootState {
   Phones_Reducer: any;
@@ -19,7 +21,15 @@ const CataloguePage = () => {
     })();
   }, [dispatch]);
 
-  return <div>Catalogue Page</div>;
+  return (
+    <div>
+      <div className="phoneListContainer">
+        {phones.map(({ name, images }: any) => (
+          <PhoneCatalogueItem name={name} image={images[0]} />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default CataloguePage;
