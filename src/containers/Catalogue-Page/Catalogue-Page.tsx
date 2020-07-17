@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchAllPhones } from "../../redux/actions/fetchPhones.actions";
+import PhoneCatalogueItem from "../../components/PhoneCatalogueItem/PhoneCatalogueItem";
+import "./styles.scss";
+import LoadingDots from "../../components/LoadingDots/LoadingDots";
 
 interface RootState {
   Phones_Reducer: any;
@@ -18,8 +21,22 @@ const CataloguePage = () => {
       await dispatch(fetchAllPhones());
     })();
   }, [dispatch]);
-
-  return <div>Catalogue Page</div>;
+  if (phones.length === 0)
+    return (
+      <div>
+        <LoadingDots color="#17ae8e" />
+      </div>
+    );
+  else
+    return (
+      <div>
+        <div className="phoneListContainer">
+          {phones.map(({ name, images, _id }: any) => (
+            <PhoneCatalogueItem name={name} image={images[0]} id={_id} />
+          ))}
+        </div>
+      </div>
+    );
 };
 
 export default CataloguePage;
