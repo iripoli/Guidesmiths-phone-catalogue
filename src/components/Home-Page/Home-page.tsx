@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles.scss";
-import CustomButton from "../../components/CustomButton/CustomButton";
+import CustomButton from "../CustomButton/CustomButton";
 import { useHistory } from "react-router-dom";
 
 const HomePage = () => {
