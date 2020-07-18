@@ -6,6 +6,7 @@ import CataloguePage from "./containers/Catalogue-Page/Catalogue-Page";
 import RatingsPage from "./containers/Ratings-Page/Ratings-Page";
 import NavBar from "./containers/NavBar/Navbar";
 import PhoneProfilePage from "./containers/PhoneProfilePage/PhoneProfilePage";
+import Page404 from "./components/404/404";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/catalogue/:id" component={PhoneProfilePage} />
         <Route path="/catalogue" component={CataloguePage} />
         <Route exact path="/ratings" component={RatingsPage} />;
+        <Route component={Page404} />
       </Switch>
     </>
   );
