@@ -5,6 +5,7 @@ import { Switch, Route } from "react-router-dom";
 import CataloguePage from "./containers/Catalogue-Page/Catalogue-Page";
 import RatingsPage from "./containers/Ratings-Page/Ratings-Page";
 import NavBar from "./containers/NavBar/Navbar";
+import PhoneProfilePage from "./containers/PhoneProfilePage/PhoneProfilePage";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/" component={HomePage} />
-        <Route exact path="/catalogue" component={CataloguePage} />
+        <Route path="/catalogue/:id" component={PhoneProfilePage} />
+        <Route path="/catalogue" component={CataloguePage} />
         <Route exact path="/ratings" component={RatingsPage} />;
       </Switch>
     </>
