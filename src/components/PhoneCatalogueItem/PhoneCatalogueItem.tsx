@@ -5,15 +5,14 @@ import { IPhone } from "../../utils/interfaces";
 
 interface Data {
   phoneData: IPhone;
-  viewType: boolean;
+  viewList: boolean;
 }
 
-const PhoneCatalogueItem = ({ phoneData, viewType }: Data) => {
-  console.log(phoneData);
+const PhoneCatalogueItem = ({ phoneData, viewList }: Data) => {
   const { _id, images, name } = phoneData;
   return (
     <Link to={`/catalogue/${_id}`} className="itemName">
-      <div className="itemContainer">
+      <div className={viewList ? "itemContainer__list" : "itemContainer__grid"}>
         <img src={images} alt={`Front of ${name}`} className="itemImage" />
         <h1 className="itemName">{name}</h1>
       </div>

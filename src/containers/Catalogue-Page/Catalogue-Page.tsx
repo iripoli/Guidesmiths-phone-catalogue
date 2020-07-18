@@ -21,7 +21,7 @@ const CataloguePage = () => {
   const phones = useSelector(
     (state: RootState) => state.Phones_Reducer.phoneList
   );
-  const viewTypeList = useSelector((state: RootState) => state.View.list);
+  const viewList = useSelector((state: RootState) => state.View.list);
 
   const handleOnChange = (inputData: string) => {
     setSearchInput(inputData);
@@ -31,14 +31,16 @@ const CataloguePage = () => {
     dispatch(toggleCatalogueView());
   };
 
+  //THE ! BEHIND IS TO AVOID THE "OBJECT IS POSSIBLY UNDEFINED"
+
   let filteredPhones = phones.filter((phone: IPhone) => {
-    if (phone.name.toLowerCase().includes(searchInput.toLowerCase())) {
-      return phone.name.toLowerCase().includes(searchInput.toLowerCase());
+    if (phone.name!.toLowerCase().includes(searchInput.toLowerCase())) {
+      return phone.name!.toLowerCase().includes(searchInput.toLowerCase());
     } else if (
-      phone.manufacturer.toLowerCase().includes(searchInput.toLowerCase())
+      phone.manufacturer!.toLowerCase().includes(searchInput.toLowerCase())
     ) {
-      return phone.manufacturer
-        .toLowerCase()
+      return phone
+        .manufacturer!.toLowerCase()
         .includes(searchInput.toLowerCase());
     }
     return null;
@@ -64,7 +66,7 @@ const CataloguePage = () => {
         handleOnChange={handleOnChange}
       />
 
-      {viewTypeList ? (
+      {viewList ? (
         <img
           src={require("../../assets/images/grid-icon.png")}
           onClick={() => toogleView()}
@@ -79,13 +81,13 @@ const CataloguePage = () => {
       )}
       <div
         className={
-          viewTypeList
+          viewList
             ? "phoneList__list__cataloguePage"
             : "phoneList__grid__cataloguePage"
         }
       >
         {filteredPhones.map((phone: any) => (
-          <PhoneCatalogueItem phoneData={phone} viewType={viewTypeList} />
+          <PhoneCatalogueItem phoneData={phone} viewList={viewList} />
         ))}
       </div>
     </div>
