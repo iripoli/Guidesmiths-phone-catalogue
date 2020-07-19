@@ -1,11 +1,6 @@
 import React from "react";
 import "./styles.scss";
-
-interface IButton {
-  label: string;
-  className: string;
-  handleClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-}
+import { IButton } from "../../utils/interfaces";
 
 const CustomButton = ({ label, className, handleClick }: IButton) => {
   return (

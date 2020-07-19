@@ -6,16 +6,20 @@ import LoadingDots from "../../components/LoadingDots/LoadingDots";
 import PhoneProfile from "../../components/PhoneProfile/PhoneProfile";
 
 interface RootState {
-  Phone?: any;
-  Phones_Reducer?: any;
+  Phone?: {
+    phone: any;
+  };
+  PhonesList?: {
+    phoneList: Array<Object>;
+  };
 }
 
 const PhoneProfilePage = () => {
   let { id } = useParams();
   const dispatch = useDispatch();
-  let phone = useSelector((state: RootState) => state.Phone.phone);
+  let phone = useSelector((state: RootState) => state.Phone!.phone);
   const phoneList = useSelector(
-    (state: RootState) => state.Phones_Reducer.phoneList
+    (state: RootState) => state.PhonesList!.phoneList
   );
 
   //IF PHONES HAVEN'T BEEN FETCHED, FETCHED THE ONE THAT MATCHES THE ID

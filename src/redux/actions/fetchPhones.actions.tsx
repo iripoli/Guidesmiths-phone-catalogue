@@ -7,6 +7,7 @@ import {
   FETCH_ONE_PHONES_SUCCESS,
   FETCH_ONE_PHONES_FAILED,
 } from "../actions.types";
+import { IFetchedData } from "../../utils/interfaces";
 
 export const fetchAllPhones = () => (dispatch: any) => {
   dispatch({ type: FETCH_PHONES_PENDING });
@@ -17,12 +18,12 @@ export const fetchAllPhones = () => (dispatch: any) => {
       dispatch({
         type: FETCH_PHONES_SUCCESS,
         payload: data.data,
-      }).then((data: any) => console.log(data.data))
+      }).then((data: IFetchedData) => console.log(data.data))
     )
     .catch((err) => dispatch({ type: FETCH_PHONES_FAILED, payload: err }));
 };
 
-export const fetchOnePhone = (id: string) => (dispatch: any) => {
+export const fetchOnePhone = (id: string) => (dispatch: Function) => {
   dispatch({ type: FETCH_ONE_PHONES_PENDING });
 
   APIKit.get(`/${id}`)
@@ -31,7 +32,7 @@ export const fetchOnePhone = (id: string) => (dispatch: any) => {
       dispatch({
         type: FETCH_ONE_PHONES_SUCCESS,
         payload: data.data,
-      }).then((data: any) => console.log(data.data))
+      }).then((data: IFetchedData) => console.log(data.data))
     )
     .catch((err) => dispatch({ type: FETCH_ONE_PHONES_FAILED, payload: err }));
 };
