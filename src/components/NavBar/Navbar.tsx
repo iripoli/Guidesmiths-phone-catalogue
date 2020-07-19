@@ -15,11 +15,6 @@ const NavBar = () => {
           Catalogue
         </Link>
       </li>
-      <li>
-        <Link to="/ratings" className="navbar__option">
-          Ratings
-        </Link>
-      </li>
     </ul>
   );
 };
