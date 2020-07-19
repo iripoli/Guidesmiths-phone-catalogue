@@ -19,3 +19,4 @@
 
 - Remember to first initialize de phone catalogue API, you can find it's repo here [https://github.com/iripoli/guidesmiths-catalogue-api]
 - Also check that port 3000 is free before starting
+- Where it says <name of the image> you have to complete with name of your choice
