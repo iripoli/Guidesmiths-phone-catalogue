@@ -26,16 +26,18 @@ const PhoneCatalogueItem = ({ phoneData, viewList }: Data) => {
     >
       <div className={viewList ? "itemContainer__list" : "itemContainer__grid"}>
         <img src={images} alt={`Front of ${name}`} className="itemImage" />
-        <h1 className="itemName">{name}</h1>
-        {!viewList ? null : (
-          <>
-            <h1 className="itemName">{manufacturer}</h1>
-            <h1 className="itemName">{screen}</h1>
-            <h1 className="itemName">{processor}</h1>
-            <h1 className="itemName">{ram}gb</h1>
-            <h1 className="itemName">€{price}</h1>
-          </>
-        )}
+        <div className="item__data">
+          <h1 className="itemName">{name}</h1>
+          {!viewList ? null : (
+            <>
+              <h1 className="itemName">{manufacturer}</h1>
+              <h1 className="itemName">{screen}</h1>
+              <h1 className="itemName">{processor}</h1>
+              <h1 className="itemName">{ram}gb</h1>
+              <h1 className="itemName">€{price}</h1>
+            </>
+          )}
+        </div>
       </div>
     </Link>
   );
