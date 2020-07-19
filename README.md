@@ -1,4 +1,4 @@
-## INSTRUCTIONS TO START WORKING WITHOUT DOCKER
+## INSTRUCTIONS TO START WORKING WITH DOCKER
 
 1. Clone the project to your local machine from [https://github.com/iripoli/Guidesmiths-phone-catalogue.git](https://github.com/iripoli/Guidesmiths-phone-catalogue.git)
 2. In the proyect directory use the console to build the docker image on your local using `docker build -t <name of the image> .`
