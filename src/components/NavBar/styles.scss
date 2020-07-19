@@ -32,3 +32,10 @@ li {
 .navbar__option:hover::after {
   width: 100%;
 }
+
+@media (max-width: 800px) {
+  .container {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
