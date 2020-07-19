@@ -1,0 +1,58 @@
+.container__profile {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+  height: fit-content;
+
+  & .column1__profile {
+    height: 60vh;
+    & .image__profile {
+      max-width: 100%;
+      max-height: 90%;
+      min-height: 90%;
+      min-width: 20rem;
+    }
+  }
+
+  & .column2__profile {
+    width: 30rem;
+  }
+  & .name__profile {
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+
+  & .column2__profile h3 {
+    margin-top: 2rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+  & .manufacturer__profile {
+    margin-top: 0 !important;
+  }
+}
+.buttonContainer__profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  border-radius: 4px;
+  border: transparent;
+
+  & :hover {
+    background: transparent;
+    color: #17ae8e;
+    border: solid #17ae8e 3px;
+  }
+}
+
+@media (max-width: 800px) {
+  .container__profile {
+    margin: 1rem;
+    .column1__profile {
+      height: fit-content;
+    }
+  }
+}

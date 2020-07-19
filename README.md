@@ -1,44 +1,22 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## INSTRUCTIONS TO START WORKING WITHOUT DOCKER
 
-## Available Scripts
+1. Clone the project to your local machine from [https://github.com/iripoli/Guidesmiths-phone-catalogue.git](https://github.com/iripoli/Guidesmiths-phone-catalogue.git)
+2. In the proyect directory use the console to build the docker image on your local using `docker build -t <name of the image> .`
+3. Once it finishes building the image you want to run the image as a container using `docker run --rm -it -p 3000:3000 <name of the image>`
+4. The proyect will start running in the container
+5. To see the app in a browser you'll have to do different things if you're using Windows or macOS.
+6. On macOS you should go to [http://localhost:3000](http://localhost:3000)
+7. On Windows you have to open a new BASH terminal and check the ip where docker is connected with `docker-machine ip default`
+8. Once you have the ip, you can now got to browser to http://<your ip>:3000
 
-In the project directory, you can run:
+## INSTRUCTIONS TO START WORKING WITHOUT DOCKER
 
-### `npm start`
+1. Clone the project to your local machine from [https://github.com/iripoli/Guidesmiths-phone-catalogue.git](https://github.com/iripoli/Guidesmiths-phone-catalogue.git)
+2. In the proyect directory use the console to install all de dependencies with `npm install`
+3. Once all the dependecies have been installed start the app using `npm start`
+4. The proyect will start running on the port:3000
+5. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Remember to first initialize de phone catalogue API, you can find it's repo here [https://github.com/iripoli/guidesmiths-catalogue-api]
+- Also check that port 3000 is free before starting
+- Where it says <name of the image> you have to complete with name of your choice
