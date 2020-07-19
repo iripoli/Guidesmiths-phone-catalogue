@@ -14,14 +14,40 @@
     height: 31rem;
     color: var(--green-color);
   }
-  & .itemImage {
-    max-width: 100%;
-    max-height: 90%;
-    min-height: 90%;
-    min-width: 15rem;
-  }
+}
+.itemContainer__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  height: 20vh;
 
-  & .itemName {
-    text-decoration: none;
-  }
+  border-top: 1px black solid;
+  margin-top: 1rem;
+  padding: 1rem;
+  font-size: 0.7rem;
+  font-weight: 400;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+}
+.container__item {
+  display: flex;
+  width: 60%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.itemImage {
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+}
+.itemName {
+  text-decoration: none;
+  margin: 2rem;
+}
+
+.itemTitle {
+  text-decoration: none;
 }
