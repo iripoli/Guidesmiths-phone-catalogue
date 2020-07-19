@@ -14,6 +14,7 @@ const INITIAL_STATE = {
 };
 
 export const fetchPhonesReducer = (state = INITIAL_STATE, action: any) => {
+  console.log(action);
   switch (action.type) {
     case FETCH_PHONES_PENDING:
       return {
