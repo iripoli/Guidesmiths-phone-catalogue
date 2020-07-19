@@ -16,3 +16,7 @@ export interface IButton {
   className: string;
   handleClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
+
+export interface IFetchedData {
+  data: Array<Object>;
+}

@@ -30,6 +30,11 @@
   justify-content: space-around;
   align-items: center;
   color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+.itemContainer__list:hover {
+  height: 22vh;
 }
 .container__item {
   display: flex;
