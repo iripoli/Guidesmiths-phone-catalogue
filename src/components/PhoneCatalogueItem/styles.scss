@@ -56,8 +56,12 @@
   min-height: 100%;
 }
 
+.itemName {
+  font-size: 1rem;
+  font-weight: 400;
+}
 .itemTitle {
-  width: 3rem;
+  font-weight: 800;
 }
 
 @media (max-width: 800px) {
