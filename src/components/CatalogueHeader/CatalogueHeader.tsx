@@ -49,14 +49,14 @@ const CatalogueHeader = ({
 
         {sortBy === "AZ" ? (
           <img
-            src={require("../../assets/images/sort-a-z.png")}
+            src={require("../../assets/images/sort-z-a.png")}
             onClick={() => sortByPriceZA()}
             alt="Change view to grid"
             className="sortIcon__cataloguePage"
           />
         ) : (
           <img
-            src={require("../../assets/images/sort-z-a.png")}
+            src={require("../../assets/images/sort-a-z.png")}
             onClick={() => sortByPriceAZ()}
             alt="Change view to list"
             className="sortIcon__cataloguePage"
