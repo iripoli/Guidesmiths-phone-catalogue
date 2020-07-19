@@ -4,9 +4,9 @@ import { fetchAllPhones } from "../../redux/actions/fetchPhones.actions";
 import PhoneCatalogueItem from "../../components/PhoneCatalogueItem/PhoneCatalogueItem";
 import "./styles.scss";
 import LoadingDots from "../../components/LoadingDots/LoadingDots";
-import Searchbox from "../../components/Searchbox/Searchbox";
 import { toggleCatalogueView } from "../../redux/actions/toogleCatalogueView.actions";
 import { IPhone } from "../../utils/interfaces";
+import CatalogueHeader from "../../components/CatalogueHeader/CatalogueHeader";
 
 interface RootState {
   Phones_Reducer: {
@@ -59,28 +59,15 @@ const CataloguePage = () => {
         <LoadingDots color="#17ae8e" />
       </div>
     );
-  else;
+
   return (
     <div className="container__cataloguePage">
-      <Searchbox
-        placeholder="Search by name or brand"
-        className="searchbox__cataloguePage"
+      <CatalogueHeader
         handleOnChange={handleOnChange}
+        viewList={viewList}
+        toogleView={toogleView}
       />
 
-      {viewList ? (
-        <img
-          src={require("../../assets/images/grid-icon.png")}
-          onClick={() => toogleView()}
-          alt="Change view to grid"
-        />
-      ) : (
-        <img
-          src={require("../../assets/images/list-icon.png")}
-          onClick={() => toogleView()}
-          alt="Change view to list"
-        />
-      )}
       <div
         className={
           viewList
