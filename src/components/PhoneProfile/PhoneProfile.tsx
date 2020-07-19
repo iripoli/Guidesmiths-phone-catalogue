@@ -2,9 +2,10 @@ import React from "react";
 import "./styles.scss";
 import CustomButton from "../CustomButton/CustomButton";
 import { useHistory } from "react-router-dom";
+import { IPhone } from "../../utils/interfaces";
 
 interface PhoneProfile {
-  phone: any;
+  phone: IPhone;
 }
 
 const PhoneProfile = ({ phone }: PhoneProfile) => {
@@ -28,7 +29,7 @@ const PhoneProfile = ({ phone }: PhoneProfile) => {
       <div className="container__profile">
         <div className="column1__profile">
           <img
-            src={images[0]}
+            src={images}
             className="image__profile"
             alt={`Front of a  ${name}`}
           />

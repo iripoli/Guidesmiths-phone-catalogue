@@ -2,8 +2,8 @@ export interface IPhone {
   _id?: string;
   name?: string;
   manufacturer?: string;
-  images: string;
-  price?: string;
+  images?: string;
+  price?: number;
   color?: string;
   description?: string;
   processor?: string;

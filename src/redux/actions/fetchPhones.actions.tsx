@@ -9,7 +9,7 @@ import {
 } from "../actions.types";
 import { IFetchedData } from "../../utils/interfaces";
 
-export const fetchAllPhones = () => (dispatch: any) => {
+export const fetchAllPhones = () => (dispatch: Function) => {
   dispatch({ type: FETCH_PHONES_PENDING });
 
   APIKit.get("/list")

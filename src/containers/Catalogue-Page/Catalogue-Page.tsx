@@ -17,7 +17,7 @@ import {
 
 interface RootState {
   PhonesList: {
-    phoneList: Array<any>;
+    phoneList: Array<IPhone>;
   };
   View: {
     list: boolean;
@@ -78,8 +78,8 @@ const CataloguePage = () => {
 
   if (sortBy === "AZ") {
     filteredPhones = filteredPhones.sort(function (a, b) {
-      var nameA = a.name.toLowerCase(),
-        nameB = b.name.toLowerCase();
+      var nameA = a.name!.toLowerCase(),
+        nameB = b.name!.toLowerCase();
       if (nameA < nameB)
         //sort string ascending
         return -1;
@@ -88,16 +88,16 @@ const CataloguePage = () => {
     });
   } else if (sortBy === "ZA") {
     filteredPhones = filteredPhones.sort(function (a, b) {
-      var nameA = a.name.toLowerCase(),
-        nameB = b.name.toLowerCase();
+      var nameA = a.name!.toLowerCase(),
+        nameB = b.name!.toLowerCase();
       if (nameA > nameB) return -1;
       if (nameA < nameB) return 1;
       return 0;
     });
   } else if (sortBy === "19") {
-    filteredPhones = filteredPhones.sort((a, b) => a.price - b.price);
+    filteredPhones = filteredPhones.sort((a, b) => a.price! - b.price!);
   } else if (sortBy === "91") {
-    filteredPhones = filteredPhones.sort((a, b) => a.price + b.price);
+    filteredPhones = filteredPhones.sort((a, b) => a.price! + b.price!);
   }
 
   useEffect(() => {
@@ -134,11 +134,9 @@ const CataloguePage = () => {
             : "phoneList__grid__cataloguePage"
         }
       >
-        {filteredPhones
-          .sort((a: any, b: any) => a.name - b.name)
-          .map((phone: IPhone) => (
-            <PhoneCatalogueItem phoneData={phone} viewList={viewList} />
-          ))}
+        {filteredPhones.map((phone: IPhone) => (
+          <PhoneCatalogueItem phoneData={phone} viewList={viewList} />
+        ))}
       </div>
     </div>
   );
