@@ -9,7 +9,9 @@ import { toggleCatalogueView } from "../../redux/actions/toogleCatalogueView.act
 import { IPhone } from "../../utils/interfaces";
 
 interface RootState {
-  Phones_Reducer: any;
+  Phones_Reducer: {
+    phoneList: Array<any>;
+  };
   View: {
     list: boolean;
   };
@@ -86,7 +88,7 @@ const CataloguePage = () => {
             : "phoneList__grid__cataloguePage"
         }
       >
-        {filteredPhones.map((phone: any) => (
+        {filteredPhones.map((phone: IPhone) => (
           <PhoneCatalogueItem phoneData={phone} viewList={viewList} />
         ))}
       </div>

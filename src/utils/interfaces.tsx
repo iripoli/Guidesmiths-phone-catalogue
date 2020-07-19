@@ -10,3 +10,9 @@ export interface IPhone {
   ram?: string;
   screen?: string;
 }
+
+export interface IButton {
+  label: string;
+  className: string;
+  handleClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
+}

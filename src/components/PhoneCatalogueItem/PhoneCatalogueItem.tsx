@@ -33,6 +33,7 @@ const PhoneCatalogueItem = ({ phoneData, viewList }: Data) => {
             <h1 className="itemName">{screen}</h1>
             <h1 className="itemName">{processor}</h1>
             <h1 className="itemName">{ram}gb</h1>
+            <h1 className="itemName">€{price}</h1>
           </>
         )}
       </div>
