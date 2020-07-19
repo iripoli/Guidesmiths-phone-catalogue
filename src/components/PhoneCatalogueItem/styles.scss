@@ -65,4 +65,18 @@
     margin: 0;
     height: fit-content;
   }
+  .itemContainer__list {
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: auto;
+    & .item__data {
+      flex-wrap: wrap;
+      text-align: center;
+      width: 100%;
+
+      & .itemName {
+        width: 100%;
+      }
+    }
+  }
 }
