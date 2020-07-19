@@ -47,3 +47,12 @@
     border: solid #17ae8e 3px;
   }
 }
+
+@media (max-width: 800px) {
+  .container__profile {
+    margin: 1rem;
+    .column1__profile {
+      height: fit-content;
+    }
+  }
+}
