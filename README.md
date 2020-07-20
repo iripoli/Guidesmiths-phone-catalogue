@@ -7,7 +7,7 @@
 5. To see the app in a browser you'll have to do different things if you're using Windows or macOS.
 6. On macOS you should go to [http://localhost:3000](http://localhost:3000)
 7. On Windows you have to open a new BASH terminal and check the ip where docker is connected with `docker-machine ip default`
-8. Once you have the ip, you can now got to browser to http://<your ip>:3000
+8. Once you have the ip, you can now got to browser to http://your ip:3000
 
 ## INSTRUCTIONS TO START WORKING WITHOUT DOCKER
 
